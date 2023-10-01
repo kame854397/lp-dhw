@@ -31,17 +31,10 @@
             document.addEventListener("mousemove", this._move.bind(this));
         }
         _move(e) {
-<<<<<<< HEAD
             this.posX = e.clientX - this.mainvisual.getBoundingClientRect().left;
             this.posY = e.clientY - this.mainvisual.getBoundingClientRect().top;
             this.stalker.classList.add("is-show");
             this.stalker.style.transform = `translate(${this.posX}px,${this.posY}px)`;
-=======
-            this.posX = e.clientX;
-            this.posY = e.clientY;
-            this.stalker.style.transform = `translate(${this.posX}px,${this.posY}px)`;
-            this.stalker.classList.add("is-visible");
->>>>>>> 7c6d64baaf8c3fff05c6ad672ed86850f3e48e3d
         }
     }
     new MouseStalker();
