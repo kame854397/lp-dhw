@@ -51,10 +51,11 @@
                 const targetY = stage.canvas.height / 2; // 画面中央
                 const animationDuration = 1000; // アニメーション時間（1秒）
             }
-            const body = document.querySelector("body");
-            body.classList.add("is-load");
-            stage.on("tick", handleMouseMove);
-            // マウスムーブイベントをリスナーに追加
+            setTimeout(function(){
+                const body = document.querySelector("body");
+                body.classList.add("is-load");
+                stage.on("tick", handleMouseMove);
+            },50);
         }
 
         function handleMouseMove(event) {
