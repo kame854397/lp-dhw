@@ -4,14 +4,15 @@
     (function(){
         let stage;
         let layers = [];
-        const layerFactors = [0.2, 0.875, 1.75, 2.5, 4.0, 0];
+        const layerFactors = [0, 0.2, 0.875, 1.75, 2.5, 4.0, 0];
         createjs.Ticker.setFPS(60);
         function init() {
-            stage = new createjs.Stage("mainvisual-bg");
+            stage = new createjs.StageGL("mainvisual-bg");
             createjs.Ticker.addEventListener("tick", tick);
 
             // 画像ファイルのパスを指定
             const imagePaths = [
+                "./images/kv-05.webp",
                 "./images/kv-04.webp",
                 "./images/kv-03.webp",
                 "./images/kv-02.webp",
